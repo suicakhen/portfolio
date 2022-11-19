@@ -796,11 +796,15 @@ html {
 
 footer{
   height:12rem;
+  padding: 3.2rem auto;
+
 }
 
 .copyright{
   font-size: 1.6rem;
-  color: #d6d6d6;
+  color: #eee;
+  text-align: center;
+
 }
 /* Responsive */
 @media (max-width: 1500px) {
