@@ -167,7 +167,7 @@ html {
   width: 100%;
   height: 100vh;
   background: linear-gradient(#022210ee, rgba(0, 0, 0, 0.3)),
-    url("/images/bg-green.png") top right no-repeat;
+    url("images/bg-green.png") top right no-repeat;
   background-size: cover; 
   margin:8 auto 0 auto;
 }
