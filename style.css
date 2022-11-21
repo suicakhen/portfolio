@@ -25,27 +25,7 @@ html {
   align-items: center;
 }
 
-/* Main Button */
-/* .main-btn {
-  position: absolute;
-  bottom:5rem;
-  width: 10rem;
-  height: 10rem;
-  background-color: #c7a622;
-  border-radius: 50%;
-  border: 0.2rem dotted #fff;
-  padding: 0.1rem;
-  overflow: hidden;
-} */
 
-/* .main-btn-content {
-  width: 100%;
-  height: 100%;
-  border: 0.2rem dotted #e7be08;
-  border-radius: 50%;
-  transform: rotate(40deg);
-  transition: transform 0.2s, border 0.2s;
-} */
 
 .main-btn:hover .main-btn-content {
   transform: rotate(60deg);
@@ -53,13 +33,7 @@ html {
   transition: transform 0.2s 0.5s, border 0.2s;
 }
 
-/* .main-btn-line {
-  position: absolute;
-  top: 4rem;
-  width: 3rem;
-  height: 0.5rem;
-  border: 0.1rem solid #fff;
-} */
+
 
 .main-btn-line:nth-child(1) {
   transform: rotateZ(-45deg) translateX(-0.65rem);
@@ -193,7 +167,7 @@ html {
   width: 100%;
   height: 100vh;
   background: linear-gradient(#022210ee, rgba(0, 0, 0, 0.3)),
-    url("/images/bg-green.png") bottom right no-repeat;
+    url("/images/bg-green.png") top right no-repeat;
   background-size: cover; 
   margin:8 auto 0 auto;
 }
@@ -332,43 +306,45 @@ html {
 
 
 .circle {
-  width: 28rem;
-  height: 28rem;
+  width: 40rem;
+  height: 40rem;
   border-radius: 50%; 
   align-self: center;
   justify-self: center;
   opacity: 0.8;
-  /* position: relative;
-  top: 20%;
-  left: 15%; */
+ 
   transition: scale(1) ;
   mix-blend-mode:exclusion;
   opacity: 0.6;
 }
 
 
-.circle:hover {
-  width: 35rem;
-  height: 35rem;
-  transition: transform 330ms ease-in-out;
-  opacity: 1;
-  /* transition: width 0.2s, height 0.2s; */
+
+
+
+.circle {
+  animation-name: move;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
-  
-.circle img {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition: left 2s, top 2s;
-} 
 
+@keyframes move {
+  0% {
+    transform: translate3d(0,-2px,0)
+  }
 
+  to {
+    transform: translate3d(0,2px,0)
+  }
+}
 
 
 /* End of Animated Circles */
 /* profile Image */
 .hero{
-  gap: 10rem;
+  gap: 8rem;
 }
 .hero-text{
   text-align: center;
@@ -397,11 +373,11 @@ html {
 }
 
 .featured-text-1 {
-  margin: 0 auto 0 10rem;
+  margin: 0 auto 0 7rem;
 }
 
 .featured-text-2 {
-  margin: 0 10rem 0 auto;
+  margin: 0 7rem 0 auto;
 }
 /* End of Featured Text */
 
@@ -426,7 +402,7 @@ html {
   color: #aaa;
   letter-spacing: 0.5rem;
   line-height: 1.2;
-  
+  text-align: justify;
   position: relative;
   
 }
@@ -804,23 +780,17 @@ footer{
   font-size: 1.6rem;
   color: #eee;
   text-align: center;
+  padding-top: 4.8rem;
 
 }
 /* Responsive */
 @media (max-width: 1500px) {
   .circle {
-    width: 45rem;
-    height: 45rem;
+    width: 40rem;
+    height: 40rem;
   }
 
   
-
-  .circle:hover {
-    width: 55rem;
-    height: 55rem;
-  }
-
- 
   .about-me-text span {
     font-size: 4.8rem;
   }
@@ -844,7 +814,10 @@ footer{
     height: 12.5rem;
   }
 
-
+  .circle{
+    width: 38rem;
+    height: 38rem;
+  }
   .progress-bar {
     right: 1rem;
     bottom: 0;
@@ -869,7 +842,10 @@ footer{
     margin: 0 2rem;
   }
 
-  
+  .circle{
+    width: 35rem;
+    height: 35rem;
+  }
 
   .about-me-text span {
     font-size: 6.4rem;
@@ -910,8 +886,8 @@ footer{
 
   }
   .circle{
-    width: 40rem;
-    height: 40rem;
+    width: 34rem;
+    height: 34rem;
     
   }
 
@@ -931,7 +907,7 @@ footer{
  
 
   .about-me-text span {
-    font-size: 4.8rem;
+    font-size: 4rem;
     color: #ccc;
   }
 
@@ -953,12 +929,18 @@ footer{
   html {
     font-size: 50%;
   }
-
+  .circle{
+    width: 34rem;
+    height: 34rem;
+  }
   .contact-form-input {
     width: 50rem;
   }
   .service-btn span {
     font-size: 3.2rem;
+  }
+  .project{
+    width: 30rem;
   }
 }
 
@@ -966,13 +948,10 @@ footer{
   html {
     font-size: 40%;
   }
-  .section-1{
-    height: 80vh;
-    
-  }
+ 
   .circle  {
-    width: 45rem;
-    height: 45rem;
+    width: 33rem;
+    height: 33rem;
   }
 
   .service-btn span {
@@ -985,7 +964,7 @@ footer{
   }
 
   .contact-form-input {
-    width: 55rem;
+    width: 50rem;
   }
 
   .slideshow {
@@ -1001,7 +980,9 @@ footer{
   html {
     font-size: 35%;
   }
-  
+  .featured-text-1,.featured-text-2{
+    display: none;
+  }
   .logo {
     font-size: 1.7rem;
     top: 9rem;
@@ -1010,12 +991,13 @@ footer{
     transform: translateX(-50%);
   }
   .section-1{
-    height:55vh
+    height:90vh
   }
 
   .navbar {
     justify-content: center;
     padding: 0;
+    
   }
 
   .circle {
@@ -1023,15 +1005,12 @@ footer{
     height:32rem;
   }
 
-  .circle:hover {
-    width: 38rem;
-    height:38rem;
-  }
+
 
   .service-btn span {
     font-size: 2.8rem;
   }
-
+  
   .form-heading {
     font-size: 5rem;
   }
