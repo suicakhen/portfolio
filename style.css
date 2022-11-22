@@ -983,13 +983,7 @@ footer{
   .featured-text-1,.featured-text-2{
     display: none;
   }
-/*   .logo {
-    font-size: 1.7rem;
-    top: 9rem;
-    left: 50%;
-    font-weight: 500;
-    transform: translateX(-50%);
-  } */
+
   .section-1{
     height:90vh
   }
