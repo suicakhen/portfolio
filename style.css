@@ -983,13 +983,13 @@ footer{
   .featured-text-1,.featured-text-2{
     display: none;
   }
-  .logo {
+/*   .logo {
     font-size: 1.7rem;
     top: 9rem;
     left: 50%;
     font-weight: 500;
     transform: translateX(-50%);
-  }
+  } */
   .section-1{
     height:90vh
   }
@@ -1005,7 +1005,9 @@ footer{
     height:32rem;
   }
 
-
+  .contact-form-input {
+    width: 35rem;
+  }
 
   .service-btn span {
     font-size: 2.8rem;
