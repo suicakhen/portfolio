@@ -10,7 +10,45 @@ const mouseCircleFn = (x, y) => {
 
   mouseDot.style.cssText = `top: ${y}px; left: ${x}px; opacity: 1`;
 };
+// End of Mouse Circle
 
+// Animated Circles
+// const circles = document.querySelectorAll(".circle");
+// const mainImg = document.querySelector(".circle img");
+
+// let mX = 0;
+// let mY = 0;
+// const z = 100;
+
+//  const animateCircles = (e, x, y) => {
+//   if (x < mX) {
+    // circles.forEach((circle) => {
+    //   circle.style.left = `${z}px`;
+    // });
+    // mainImg.style.left = `${z}px`;
+  // } else if (x > mX) {
+  //   circles.forEach((circle) => {
+  //     circle.style.left = `-${z}px`;
+  //   });//
+  //   mainImg.style.left = `-${z}px`;
+  // }
+
+  // if (y < mY) {
+    // circles.forEach((circle) => {
+    //   circle.style.top = `${z}px`;
+    // });
+    // mainImg.style.top = `${z}px`;
+  // } else if (y > mY) {
+  //   circles.forEach((circle) => {
+  //     circle.style.top = `-${z}px`;
+  //   });
+//     mainImg.style.top = `-${z}px`;
+//   }
+
+//   mX = e.clientX;
+//   mY = e.clientY;
+// };
+// End of Animated Circles
 
 let hoveredElPosition = [];
 
@@ -247,7 +285,91 @@ projects.forEach((project, i) => {
     project.firstElementChild.style.top = "2rem";
   });
 
+  // // Big Project Image
+  // project.addEventListener("click", () => {
+  //   const bigImgWrapper = document.createElement("div");
+  //   bigImgWrapper.className = "project-img-wrapper";
+  //   container.appendChild(bigImgWrapper);
 
+  //   const bigImg = document.createElement("img");
+  //   bigImg.className = "project-img";
+  //   const imgPath = project.firstElementChild.getAttribute("src").split(".")[0];
+  //   bigImg.setAttribute("src", `${imgPath}-big.jpg`);
+  //   bigImgWrapper.appendChild(bigImg);
+  //   document.body.style.overflowY = "hidden";
+
+  //   document.removeEventListener("scroll", scrollFn);
+
+  //   mouseCircle.style.opacity = 0;
+
+  //   progressBarFn(bigImgWrapper);
+
+  //   bigImgWrapper.onscroll = () => {
+  //     progressBarFn(bigImgWrapper);
+  //   };
+
+  //   projectHideBtn.classList.add("change");
+
+  //   projectHideBtn.onclick = () => {
+  //     projectHideBtn.classList.remove("change");
+  //     bigImgWrapper.remove();
+  //     document.body.style.overflowY = "scroll";
+
+  //     document.addEventListener("scroll", scrollFn);
+
+  //     progressBarFn();
+  //   };
+  // });
+  // End of Big Project Image
+
+  i >= 6 && (project.style.cssText = "display: none; opacity: 0");
+});
+
+// Projects Button
+// const section3 = document.querySelector(".section-3");
+// const projectsBtn = document.querySelector(".projects-btn");
+// const projectsBtnText = document.querySelector(".projects-btn span");
+// let showHideBool = true;
+
+// const showProjects = (project, i) => {
+//   setTimeout(() => {
+//     project.style.display = "flex";
+//     section3.scrollIntoView({ block: "end" });
+//   }, 600);
+
+//   setTimeout(() => {
+//     project.style.opacity = "1";
+//   }, i * 200);
+// };
+
+// const hideProjects = (project, i) => {
+//   setTimeout(() => {
+//     project.style.display = "none";
+//     section3.scrollIntoView({ block: "end" });
+//   }, 1200);
+
+//   setTimeout(() => {
+//     project.style.opacity = "0";
+//   }, i * 100);
+// };
+
+// projectsBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   projectsBtn.firstElementChild.nextElementSibling.classList.toggle("change");
+
+//   showHideBool
+//     ? (projectsBtnText.textContent = "Show Less")
+//     : (projectsBtnText.textContent = "Show More");
+
+//   projects.forEach((project, i) => {
+//     i >= 6 &&
+//       (showHideBool ? showProjects(project, i) : hideProjects(project, i));
+//   });
+//   showHideBool = !showHideBool;
+// });
+// End of Projects Button
+// End of Projects
 
 // Section 4
 document.querySelectorAll(".service-btn").forEach((service) => {
