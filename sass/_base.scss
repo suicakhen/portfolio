@@ -1,0 +1,121 @@
+:root {
+  --color-primary: #e65a82;
+  --color-primary-light: #b6789c;
+  --color-primary-dark: #87666e;
+  --color-gradient: linear-gradient(To right, #b6789c, #947b7f);
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #3d332c;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --color-bg: #f0e9ea;
+  --color-bg-light: #f4f1ef;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-4);
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 49.2em; // 786px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Jura", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-1);
+  font-size: 1.6rem;
+}
+
+.container {
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.heading-2 {
+  @extend .heading;
+  font-size: 3.2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}
+
+.heading-3 {
+  @extend .heading;
+  font-weight: 500;
+  color: var(--color-primary-dark-1);
+  font-size: 2.4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 2rem;
+  }
+}
+
+.heading-4 {
+  @extend .heading;
+  color: #87666e;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.heading-5 {
+  color: var(--color-primary-light);
+  font-size: 1.6rem;
+  text-transform: none;
+}
+
+.body-text {
+  font-size: 1.6rem;
+}
